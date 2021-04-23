@@ -1,4 +1,8 @@
 import Vapor
+import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 func routes(_ app: Application) throws {
     app.get { req in
