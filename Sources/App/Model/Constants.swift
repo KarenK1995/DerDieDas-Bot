@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     
-    static let telegramToken = "1765148950:AAFBuUdinA3X7ZXMFbHIJemNML-nA_wlj8o"
+    static let telegramToken = "1663829518:AAFkv2jiaL9hC7vPMKu6jYl3b3lQ4k2dqq0"
 }
 
 
