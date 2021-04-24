@@ -18,6 +18,8 @@ func routes(_ app: Application) throws {
         do {
             let message = try request.content.decode(RSMessage.self)
             
+            let logMessage = Logger.Message(stringLiteral: "***** \(request.body.string ?? "") *****")
+            request.logger.info(logMessage)
             
             let responseMessage = DerDieDasDataProvider.search(searchTerm: message.message.text)?.article.uppercased() ?? "Leider konnte ich den Artikel nicht finden"
             
@@ -44,3 +46,7 @@ func routes(_ app: Application) throws {
 
 //DerDieDas_lernen_bot
 //1663829518:AAFkv2jiaL9hC7vPMKu6jYl3b3lQ4k2dqq0
+
+
+//,
+//.target(name: "Project", dependencies: ["Logging"])
