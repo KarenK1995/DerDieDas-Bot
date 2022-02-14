@@ -5,12 +5,9 @@ import FoundationNetworking
 #endif
 
 func routes(_ app: Application) throws {
-    app.get { req in
-        return "It works!"
-    }
-
-    app.get("hello") { req -> String in
-        return "Hello, world!"
+    
+    app.get("GET request example") { req -> String in
+        return "GET Response"
     }
     
     app.post(["message", "1663829518:AAFkv2jiaL9hC7vPMKu6jYl3b3lQ4k2dqq0"]) { request -> String in
@@ -42,11 +39,3 @@ func routes(_ app: Application) throws {
         return "11"
     }
 }
-
-
-//DerDieDas_lernen_bot
-//1663829518:AAFkv2jiaL9hC7vPMKu6jYl3b3lQ4k2dqq0
-
-
-//,
-//.target(name: "Project", dependencies: ["Logging"])
